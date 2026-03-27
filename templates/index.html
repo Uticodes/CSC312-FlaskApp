@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Flask App</title>
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #f0f4f8;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0d1b2a, #1b4f72);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: #aed6f1;
+        }
+
+        .feature-card {
+            border: none;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+        }
+
+        footer {
+            background-color: #0d1b2a;
+            color: #aed6f1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0d1b2a;">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="{{ url_for('index') }}">🌐 MIVA-CSC312 FlaskApp</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{ url_for('index') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('signup') }}">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Welcome to FlaskApp</h1>
+        <p>A simple, secure web application built with Flask, Bootstrap & MySQL</p>
+        <a href="{{ url_for('signup') }}" class="btn btn-primary btn-lg mt-4 px-5">
+            Get Started &rarr;
+        </a>
+    </div>
+
+    <!-- Features Section -->
+    <div class="container my-5">
+        <h2 class="text-center fw-bold mb-4">What We Offer</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card feature-card h-100 p-4 text-center">
+                    <div class="feature-icon mb-3">🔒</div>
+                    <h5 class="fw-bold">Secure Authentication</h5>
+                    <p class="text-muted">Your password is hashed using industry-standard algorithms before being
+                        stored.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card feature-card h-100 p-4 text-center">
+                    <div class="feature-icon mb-3">🗄️</div>
+                    <h5 class="fw-bold">MySQL Database</h5>
+                    <p class="text-muted">User credentials are stored safely in a MySQL database with proper schema
+                        design.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card feature-card h-100 p-4 text-center">
+                    <div class="feature-icon mb-3">⚡</div>
+                    <h5 class="fw-bold">Built with Flask</h5>
+                    <p class="text-muted">Lightweight, fast, and scalable web framework for Python — perfect for web
+                        apps.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Banner -->
+    <div class="container mb-5">
+        <div class="p-5 rounded-4 text-center" style="background: #1b4f72; color: white;">
+            <h3 class="fw-bold">Ready to join?</h3>
+            <p>Create your account in seconds. No credit card required.</p>
+            <a href="{{ url_for('signup') }}" class="btn btn-light btn-lg px-5">Sign Up Now</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center py-4">
+        <p class="mb-0">&copy; 2025 FlaskApp &mdash; MIVA-CSC312 Web Application Development</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
