@@ -2,7 +2,6 @@
 
 A simple and secure web application built with **Flask**, **Bootstrap 5**, and **MySQL** as part of the CSC312 Web Application Development course.
 
----
 
 ## 📋 Features
 
@@ -11,7 +10,6 @@ A simple and secure web application built with **Flask**, **Bootstrap 5**, and *
 - **MySQL Integration** — User data stored in a `tbl_user` table
 - **Password Hashing** — Passwords are hashed using Werkzeug before database storage
 
----
 
 ## 🗂️ Project Structure
 
@@ -26,7 +24,6 @@ CSC312-FlaskApp/
     └── signup.html         # Signup page
 ```
 
----
 
 ## ⚙️ Prerequisites
 
@@ -36,7 +33,6 @@ Make sure you have the following installed:
 - **MySQL Server** — [mysql.com](https://dev.mysql.com/downloads/) or via XAMPP/WAMP
 - **pip** (comes with Python)
 
----
 
 ## 🚀 Setup & Running the App
 
@@ -129,7 +125,6 @@ You should see:
 
 Visit: **http://127.0.0.1:5000** (or **http://127.0.0.1:5001** if port 5000 is in use)
 
----
 
 ## 🧪 Testing the App
 
@@ -143,7 +138,6 @@ Visit: **http://127.0.0.1:5000** (or **http://127.0.0.1:5001** if port 5000 is i
 mysql -u root -p -e "USE flask_app_db; SELECT id, username, created_at FROM tbl_user;"
 ```
 
----
 
 ## 🔐 Security Notes
 
@@ -151,7 +145,6 @@ mysql -u root -p -e "USE flask_app_db; SELECT id, username, created_at FROM tbl_
 - The Flask `SECRET_KEY` is loaded from the `.env` file, not hardcoded
 - The `.env` file is listed in `.gitignore` to prevent credentials from being committed to version control
 
----
 
 ## 📦 Dependencies
 
@@ -162,8 +155,4 @@ mysql -u root -p -e "USE flask_app_db; SELECT id, username, created_at FROM tbl_
 | `werkzeug` | Password hashing utilities |
 | `python-dotenv` | Load environment variables from `.env` |
 
----
 
-## 👤 Author
-
-**David Odejobi** — CSC312 Web Application Development, MIVA University
